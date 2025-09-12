@@ -52,7 +52,7 @@ export default function HomePage() {
             </div>
             <div className="relative">
               <Image
-                src="/corporate-team-working-with-technology-in-modern-o.jpg"
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=500&fit=crop&crop=center"
                 alt="Corporate team collaborating with technology"
                 width={600}
                 height={500}
@@ -88,7 +88,7 @@ export default function HomePage() {
             </div>
             <div className="relative">
               <Image
-                src="/enterprise-software-consulting-and-digital-transfo.jpg"
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=400&fit=crop&crop=center"
                 alt="Enterprise software consulting illustration"
                 width={500}
                 height={400}
@@ -222,7 +222,7 @@ export default function HomePage() {
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
                     <Image
-                      src="/sap-rise-cloud-transformation-icon.jpg"
+                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=80&h=80&fit=crop&crop=center"
                       alt="SAP RISE illustration"
                       width={80}
                       height={80}
@@ -246,7 +246,7 @@ export default function HomePage() {
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
                     <Image
-                      src="/sap-analytics-cloud-dashboard-illustration.jpg"
+                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=80&h=80&fit=crop&crop=center"
                       alt="SAP Analytics Cloud illustration"
                       width={80}
                       height={80}
@@ -269,7 +269,7 @@ export default function HomePage() {
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
                     <Image
-                      src="/hr-management-and-successfactors-illustration.jpg"
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=center"
                       alt="SAP HCM SuccessFactors illustration"
                       width={80}
                       height={80}
@@ -292,7 +292,7 @@ export default function HomePage() {
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
                     <Image
-                      src="/sap-fiori-user-experience-design-illustration.jpg"
+                      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=80&h=80&fit=crop&crop=center"
                       alt="SAP Fiori illustration"
                       width={80}
                       height={80}
@@ -328,7 +328,7 @@ export default function HomePage() {
               <CardHeader>
                 <div className="mb-4">
                   <Image
-                    src="/crm-customer-relationship-management-dashboard.jpg"
+                    src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=300&h=200&fit=crop&crop=center"
                     alt="CRM Product illustration"
                     width={300}
                     height={200}
@@ -362,7 +362,7 @@ export default function HomePage() {
               <CardHeader>
                 <div className="mb-4">
                   <Image
-                    src="/erp-enterprise-resource-planning-system-dashboard.jpg"
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop&crop=center"
                     alt="ERP Product illustration"
                     width={300}
                     height={200}
@@ -396,7 +396,7 @@ export default function HomePage() {
               <CardHeader>
                 <div className="mb-4">
                   <Image
-                    src="/hrms-human-resource-management-system-interface.jpg"
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=200&fit=crop&crop=center"
                     alt="HRMS Product illustration"
                     width={300}
                     height={200}
@@ -430,7 +430,7 @@ export default function HomePage() {
               <CardHeader>
                 <div className="mb-4">
                   <Image
-                    src="/dealer-management-system-automotive-industry-dashb.jpg"
+                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&h=200&fit=crop&crop=center"
                     alt="Dealer Management System illustration"
                     width={300}
                     height={200}
@@ -464,7 +464,7 @@ export default function HomePage() {
               <CardHeader>
                 <div className="mb-4">
                   <Image
-                    src="/order-management-system-e-commerce-fulfillment-das.jpg"
+                    src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&h=200&fit=crop&crop=center"
                     alt="Order Management System illustration"
                     width={300}
                     height={200}
@@ -513,7 +513,7 @@ export default function HomePage() {
             <div className="text-center p-6 bg-background hover:bg-background/80 transition-all duration-300 hover:shadow-md hover:-translate-y-1 border-2 hover:border-primary/20">
               <div className="mb-4">
                 <Image
-                  src="/manufacturing-industry-factory-automation-illustra.jpg"
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=60&h=60&fit=crop&crop=center"
                   alt="Manufacturing industry"
                   width={60}
                   height={60}
@@ -525,7 +525,7 @@ export default function HomePage() {
             <div className="text-center p-6 bg-background hover:bg-background/80 transition-all duration-300 hover:shadow-md hover:-translate-y-1 border-2 hover:border-primary/20">
               <div className="mb-4">
                 <Image
-                  src="/banking-financial-services-insurance-bfsi-illustra.jpg"
+                  src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=60&h=60&fit=crop&crop=center"
                   alt="BFSI industry"
                   width={60}
                   height={60}
@@ -537,7 +537,7 @@ export default function HomePage() {
             <div className="text-center p-6 bg-background hover:bg-background/80 transition-all duration-300 hover:shadow-md hover:-translate-y-1 border-2 hover:border-primary/20">
               <div className="mb-4">
                 <Image
-                  src="/pharmaceutical-healthcare-industry-illustration.jpg"
+                  src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=60&h=60&fit=crop&crop=center"
                   alt="Pharmaceutical industry"
                   width={60}
                   height={60}
@@ -549,7 +549,7 @@ export default function HomePage() {
             <div className="text-center p-6 bg-background hover:bg-background/80 transition-all duration-300 hover:shadow-md hover:-translate-y-1 border-2 hover:border-primary/20">
               <div className="mb-4">
                 <Image
-                  src="/retail-e-commerce-shopping-industry-illustration.jpg"
+                  src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=60&h=60&fit=crop&crop=center"
                   alt="Retail industry"
                   width={60}
                   height={60}
@@ -561,7 +561,7 @@ export default function HomePage() {
             <div className="text-center p-6 bg-background hover:bg-background/80 transition-all duration-300 hover:shadow-md hover:-translate-y-1 border-2 hover:border-primary/20">
               <div className="mb-4">
                 <Image
-                  src="/placeholder.svg?height=60&width=60"
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=60&h=60&fit=crop&crop=center"
                   alt="Public sector"
                   width={60}
                   height={60}
@@ -587,7 +587,7 @@ export default function HomePage() {
             <div className="text-center p-6">
               <div className="mb-4">
                 <Image
-                  src="/placeholder.svg?height=80&width=80"
+                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=80&h=80&fit=crop&crop=center"
                   alt="Trust illustration"
                   width={80}
                   height={80}
@@ -602,7 +602,7 @@ export default function HomePage() {
             <div className="text-center p-6">
               <div className="mb-4">
                 <Image
-                  src="/placeholder.svg?height=80&width=80"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=center"
                   alt="Expertise illustration"
                   width={80}
                   height={80}
@@ -617,7 +617,7 @@ export default function HomePage() {
             <div className="text-center p-6">
               <div className="mb-4">
                 <Image
-                  src="/placeholder.svg?height=80&width=80"
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=80&h=80&fit=crop&crop=center"
                   alt="Innovation illustration"
                   width={80}
                   height={80}
@@ -632,7 +632,7 @@ export default function HomePage() {
             <div className="text-center p-6">
               <div className="mb-4">
                 <Image
-                  src="/placeholder.svg?height=80&width=80"
+                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=80&h=80&fit=crop&crop=center"
                   alt="Global delivery illustration"
                   width={80}
                   height={80}
@@ -661,7 +661,7 @@ export default function HomePage() {
             <div className="text-center">
               <div className="mb-4">
                 <Image
-                  src="/placeholder.svg?height=80&width=80"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=center"
                   alt="Consult process illustration"
                   width={80}
                   height={80}
@@ -679,7 +679,7 @@ export default function HomePage() {
             <div className="text-center">
               <div className="mb-4">
                 <Image
-                  src="/placeholder.svg?height=80&width=80"
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=80&h=80&fit=crop&crop=center"
                   alt="Implement process illustration"
                   width={80}
                   height={80}
@@ -697,7 +697,7 @@ export default function HomePage() {
             <div className="text-center">
               <div className="mb-4">
                 <Image
-                  src="/placeholder.svg?height=80&width=80"
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=80&h=80&fit=crop&crop=center"
                   alt="Support process illustration"
                   width={80}
                   height={80}
@@ -715,7 +715,7 @@ export default function HomePage() {
             <div className="text-center">
               <div className="mb-4">
                 <Image
-                  src="/placeholder.svg?height=80&width=80"
+                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=80&h=80&fit=crop&crop=center"
                   alt="Scale process illustration"
                   width={80}
                   height={80}
@@ -747,7 +747,7 @@ export default function HomePage() {
           </div>
           <div className="mb-8">
             <Image
-              src="/placeholder.svg?height=300&width=800"
+              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=300&fit=crop&crop=center"
               alt="Global presence world map"
               width={800}
               height={300}
@@ -800,7 +800,7 @@ export default function HomePage() {
             </h2>
             <div className="mb-8">
               <Image
-                src="/placeholder.svg?height=200&width=600"
+                src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=200&fit=crop&crop=center"
                 alt="Compliance and security illustration"
                 width={600}
                 height={200}
@@ -838,7 +838,7 @@ export default function HomePage() {
       <section className="relative py-16 bg-primary text-primary-foreground overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/placeholder.svg?height=400&width=1200"
+            src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=400&fit=crop&crop=center"
             alt="CTA background"
             width={1200}
             height={400}
