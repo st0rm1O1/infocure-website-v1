@@ -3,23 +3,45 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 import { cn } from "@/lib/utils"
+
+interface DropdownProps {
+  title: string
+  items: { name: string; href: string }[]
+}
+
+function Dropdown({ title, items }: DropdownProps) {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <div className="relative">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center space-x-1 px-4 py-2 text-sm font-medium font-heading hover:text-primary transition-colors"
+      >
+        <span>{title}</span>
+        <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+      {isOpen && (
+        <div className="absolute top-full left-0 mt-1 w-80 bg-white border shadow-lg z-50">
+          <div className="grid grid-cols-1 gap-1 p-2">
+            {items.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="block px-3 py-2 text-sm hover:bg-gray-50 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
 
 const services = [
   { name: "SAP Consultation & Advisory", href: "/services/sap-consultation" },
@@ -55,6 +77,8 @@ const products = [
 ]
 
 export function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container-custom">
@@ -65,149 +89,101 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden lg:flex">
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <div className="grid w-[600px] gap-3 p-4 md:grid-cols-2">
-                    {services.map((service) => (
-                      <NavigationMenuLink key={service.name} asChild>
-                        <Link
-                          href={service.href}
-                          className="block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="text-sm font-medium leading-none font-heading">{service.name}</div>
-                        </Link>
-                      </NavigationMenuLink>
-                    ))}
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <div className="grid w-[400px] gap-3 p-4">
-                    {solutions.map((solution) => (
-                      <NavigationMenuLink key={solution.name} asChild>
-                        <Link
-                          href={solution.href}
-                          className="block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="text-sm font-medium leading-none font-heading">{solution.name}</div>
-                        </Link>
-                      </NavigationMenuLink>
-                    ))}
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <div className="grid w-[300px] gap-3 p-4">
-                    {products.map((product) => (
-                      <NavigationMenuLink key={product.name} asChild>
-                        <Link
-                          href={product.href}
-                          className="block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="text-sm font-medium leading-none font-heading">{product.name}</div>
-                        </Link>
-                      </NavigationMenuLink>
-                    ))}
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link
-                    href="/about"
-                    className={cn(
-                      "group inline-flex h-10 w-max items-center justify-center bg-background px-4 py-2 text-sm font-medium font-heading transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-                    )}
-                  >
-                    About
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link
-                    href="/contact"
-                    className={cn(
-                      "group inline-flex h-10 w-max items-center justify-center bg-background px-4 py-2 text-sm font-medium font-heading transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-                    )}
-                  >
-                    Contact
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+          <nav className="hidden lg:flex items-center space-x-1">
+            <Dropdown title="Services" items={services} />
+            <Dropdown title="Solutions" items={solutions} />
+            <Dropdown title="Products" items={products} />
+            <Link
+              href="/about"
+              className="px-4 py-2 text-sm font-medium font-heading hover:text-primary transition-colors"
+            >
+              About
+            </Link>
+            <Link
+              href="/contact"
+              className="px-4 py-2 text-sm font-medium font-heading hover:text-primary transition-colors"
+            >
+              Contact
+            </Link>
+          </nav>
 
           <div className="hidden lg:flex">
-            <Button asChild className="btn-hover">
+            <Button asChild>
               <Link href="/contact">Get in Touch</Link>
             </Button>
           </div>
 
           {/* Mobile menu */}
-          <Sheet>
-            <SheetTrigger asChild className="lg:hidden">
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <SheetHeader>
-                <SheetTitle className="font-heading">Navigation</SheetTitle>
-              </SheetHeader>
-              <div className="grid gap-4 py-4">
-                <div className="space-y-2">
-                  <h4 className="font-medium font-heading">Services</h4>
-                  <div className="grid gap-1">
-                    {services.slice(0, 5).map((service) => (
-                      <Link
-                        key={service.name}
-                        href={service.href}
-                        className="block px-2 py-1 text-sm hover:bg-accent"
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                  </div>
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden p-2"
+          >
+            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+
+          {/* Mobile menu overlay */}
+          {mobileMenuOpen && (
+            <div className="fixed inset-0 z-50 lg:hidden">
+              <div className="fixed inset-0 bg-black/50" onClick={() => setMobileMenuOpen(false)} />
+              <div className="fixed right-0 top-0 h-full w-[300px] bg-white p-6 shadow-lg">
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="text-lg font-semibold font-heading">Navigation</h2>
+                  <button onClick={() => setMobileMenuOpen(false)}>
+                    <X className="h-6 w-6" />
+                  </button>
                 </div>
-                <div className="space-y-2">
-                  <h4 className="font-medium font-heading">Products</h4>
-                  <div className="grid gap-1">
-                    {products.map((product) => (
-                      <Link
-                        key={product.name}
-                        href={product.href}
-                        className="block px-2 py-1 text-sm hover:bg-accent"
-                      >
-                        {product.name}
-                      </Link>
-                    ))}
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-medium font-heading mb-2">Services</h4>
+                    <div className="space-y-1">
+                      {services.slice(0, 5).map((service) => (
+                        <Link
+                          key={service.name}
+                          href={service.href}
+                          className="block px-2 py-1 text-sm hover:bg-gray-50"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
+                  <div>
+                    <h4 className="font-medium font-heading mb-2">Products</h4>
+                    <div className="space-y-1">
+                      {products.map((product) => (
+                        <Link
+                          key={product.name}
+                          href={product.href}
+                          className="block px-2 py-1 text-sm hover:bg-gray-50"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {product.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                  <Link 
+                    href="/about" 
+                    className="block px-2 py-1 text-sm hover:bg-gray-50 font-heading"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    About
+                  </Link>
+                  <Link 
+                    href="/contact" 
+                    className="block px-2 py-1 text-sm hover:bg-gray-50 font-heading"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Contact
+                  </Link>
+                  <Button asChild className="mt-4 w-full">
+                    <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>Get in Touch</Link>
+                  </Button>
                 </div>
-                <Link href="/about" className="block px-2 py-1 text-sm hover:bg-accent font-heading">
-                  About
-                </Link>
-                <Link href="/contact" className="block px-2 py-1 text-sm hover:bg-accent font-heading">
-                  Contact
-                </Link>
-                <Button asChild className="mt-4">
-                  <Link href="/contact">Get in Touch</Link>
-                </Button>
               </div>
-            </SheetContent>
-          </Sheet>
+            </div>
+          )}
         </div>
       </div>
     </header>
