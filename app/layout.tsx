@@ -1,15 +1,12 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Inter } from "next/font/google"
+import { GeistSans } from "geist/font/sans"
+import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
 
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist",
-  weight: ["600", "700"],
-})
+const geist = GeistSans
 
 const inter = Inter({
   subsets: ["latin"],
