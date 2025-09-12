@@ -11,7 +11,14 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
-import { Menu, X } from "lucide-react"
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+import { Menu } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const services = [
@@ -48,8 +55,6 @@ const products = [
 ]
 
 export function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container-custom">
@@ -63,7 +68,7 @@ export function Header() {
           <NavigationMenu className="hidden lg:flex">
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="font-heading">Services</NavigationMenuTrigger>
+                <NavigationMenuTrigger>Services</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid w-[600px] gap-3 p-4 md:grid-cols-2">
                     {services.map((service) => (
@@ -72,7 +77,7 @@ export function Header() {
                           href={service.href}
                           className="block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         >
-                          <div className="text-sm font-medium leading-none">{service.name}</div>
+                          <div className="text-sm font-medium leading-none font-heading">{service.name}</div>
                         </Link>
                       </NavigationMenuLink>
                     ))}
@@ -81,7 +86,7 @@ export function Header() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="font-heading">Solutions</NavigationMenuTrigger>
+                <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid w-[400px] gap-3 p-4">
                     {solutions.map((solution) => (
@@ -90,7 +95,7 @@ export function Header() {
                           href={solution.href}
                           className="block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         >
-                          <div className="text-sm font-medium leading-none">{solution.name}</div>
+                          <div className="text-sm font-medium leading-none font-heading">{solution.name}</div>
                         </Link>
                       </NavigationMenuLink>
                     ))}
@@ -99,7 +104,7 @@ export function Header() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="font-heading">Products</NavigationMenuTrigger>
+                <NavigationMenuTrigger>Products</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid w-[300px] gap-3 p-4">
                     {products.map((product) => (
@@ -108,7 +113,7 @@ export function Header() {
                           href={product.href}
                           className="block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         >
-                          <div className="text-sm font-medium leading-none">{product.name}</div>
+                          <div className="text-sm font-medium leading-none font-heading">{product.name}</div>
                         </Link>
                       </NavigationMenuLink>
                     ))}
@@ -145,33 +150,65 @@ export function Header() {
           </NavigationMenu>
 
           <div className="hidden lg:flex">
-            <Button asChild className="font-heading btn-hover">
+            <Button asChild className="btn-hover">
               <Link href="/contact">Get in Touch</Link>
             </Button>
           </div>
 
-          {/* Mobile menu button */}
-          <button className="lg:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden border-t py-4">
-            <div className="space-y-4">
-              <Link href="/about" className="block py-2 text-sm font-medium font-heading">
-                About
-              </Link>
-              <Link href="/contact" className="block py-2 text-sm font-medium font-heading">
-                Contact
-              </Link>
-              <Button asChild className="w-full font-heading">
-                <Link href="/contact">Get in Touch</Link>
+          {/* Mobile menu */}
+          <Sheet>
+            <SheetTrigger asChild className="lg:hidden">
+              <Button variant="ghost" size="icon">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Toggle menu</span>
               </Button>
-            </div>
-          </div>
-        )}
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <SheetHeader>
+                <SheetTitle className="font-heading">Navigation</SheetTitle>
+              </SheetHeader>
+              <div className="grid gap-4 py-4">
+                <div className="space-y-2">
+                  <h4 className="font-medium font-heading">Services</h4>
+                  <div className="grid gap-1">
+                    {services.slice(0, 5).map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="block px-2 py-1 text-sm hover:bg-accent"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-medium font-heading">Products</h4>
+                  <div className="grid gap-1">
+                    {products.map((product) => (
+                      <Link
+                        key={product.name}
+                        href={product.href}
+                        className="block px-2 py-1 text-sm hover:bg-accent"
+                      >
+                        {product.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                <Link href="/about" className="block px-2 py-1 text-sm hover:bg-accent font-heading">
+                  About
+                </Link>
+                <Link href="/contact" className="block px-2 py-1 text-sm hover:bg-accent font-heading">
+                  Contact
+                </Link>
+                <Button asChild className="mt-4">
+                  <Link href="/contact">Get in Touch</Link>
+                </Button>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   )

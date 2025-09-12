@@ -43,7 +43,7 @@ export default function HomePage() {
               <Button
                 size="lg"
                 asChild
-                className="font-heading btn-hover px-8 py-3"
+                className="btn-hover px-8 py-3"
               >
                 <Link href="/contact">
                   Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
@@ -56,7 +56,7 @@ export default function HomePage() {
                 alt="Corporate team collaborating with technology"
                 width={600}
                 height={500}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover corporate-shadow-lg"
                 priority
               />
             </div>
@@ -80,7 +80,7 @@ export default function HomePage() {
               <Button
                 variant="outline"
                 asChild
-                className="font-heading btn-hover bg-background border-2 hover:border-primary/30"
+                className="btn-hover bg-background border-2 hover:border-primary/30"
               >
                 <Link href="/about">Learn About Us</Link>
               </Button>
@@ -91,7 +91,7 @@ export default function HomePage() {
                 alt="Enterprise software consulting illustration"
                 width={500}
                 height={400}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover corporate-shadow-lg"
               />
             </div>
           </div>
@@ -225,7 +225,7 @@ export default function HomePage() {
                       alt="SAP RISE illustration"
                       width={80}
                       height={80}
-                      className="object-cover"
+                      className="object-cover corporate-shadow"
                     />
                   </div>
                   <div>
@@ -249,7 +249,7 @@ export default function HomePage() {
                       alt="SAP Analytics Cloud illustration"
                       width={80}
                       height={80}
-                      className="object-cover"
+                      className="object-cover corporate-shadow"
                     />
                   </div>
                   <div>
@@ -272,7 +272,7 @@ export default function HomePage() {
                       alt="SAP HCM SuccessFactors illustration"
                       width={80}
                       height={80}
-                      className="object-cover"
+                      className="object-cover corporate-shadow"
                     />
                   </div>
                   <div>
@@ -295,7 +295,7 @@ export default function HomePage() {
                       alt="SAP Fiori illustration"
                       width={80}
                       height={80}
-                      className="object-cover"
+                      className="object-cover corporate-shadow"
                     />
                   </div>
                   <div>
@@ -331,7 +331,7 @@ export default function HomePage() {
                     alt="CRM Product illustration"
                     width={300}
                     height={200}
-                    className="w-full h-32 object-cover"
+                    className="w-full h-32 object-cover corporate-shadow"
                   />
                 </div>
                 <CardTitle className="flex items-center space-x-2 font-heading">
@@ -365,7 +365,7 @@ export default function HomePage() {
                     alt="ERP Product illustration"
                     width={300}
                     height={200}
-                    className="w-full h-32 object-cover"
+                    className="w-full h-32 object-cover corporate-shadow"
                   />
                 </div>
                 <CardTitle className="flex items-center space-x-2 font-heading">
@@ -399,7 +399,7 @@ export default function HomePage() {
                     alt="HRMS Product illustration"
                     width={300}
                     height={200}
-                    className="w-full h-32 object-cover"
+                    className="w-full h-32 object-cover corporate-shadow"
                   />
                 </div>
                 <CardTitle className="flex items-center space-x-2 font-heading">
@@ -448,7 +448,7 @@ export default function HomePage() {
                   alt="Manufacturing industry"
                   width={60}
                   height={60}
-                  className="mx-auto"
+                  className="mx-auto corporate-shadow"
                 />
               </div>
               <h3 className="font-semibold font-heading">Manufacturing</h3>
@@ -460,7 +460,7 @@ export default function HomePage() {
                   alt="BFSI industry"
                   width={60}
                   height={60}
-                  className="mx-auto"
+                  className="mx-auto corporate-shadow"
                 />
               </div>
               <h3 className="font-semibold font-heading">BFSI</h3>
@@ -472,7 +472,7 @@ export default function HomePage() {
                   alt="Pharmaceutical industry"
                   width={60}
                   height={60}
-                  className="mx-auto"
+                  className="mx-auto corporate-shadow"
                 />
               </div>
               <h3 className="font-semibold font-heading">Pharma</h3>
@@ -484,7 +484,7 @@ export default function HomePage() {
                   alt="Retail industry"
                   width={60}
                   height={60}
-                  className="mx-auto"
+                  className="mx-auto corporate-shadow"
                 />
               </div>
               <h3 className="font-semibold font-heading">Retail</h3>
@@ -496,7 +496,7 @@ export default function HomePage() {
                   alt="Public sector"
                   width={60}
                   height={60}
-                  className="mx-auto"
+                  className="mx-auto corporate-shadow"
                 />
               </div>
               <h3 className="font-semibold font-heading">Public Sector</h3>
@@ -522,7 +522,7 @@ export default function HomePage() {
                   alt="Trust illustration"
                   width={80}
                   height={80}
-                  className="mx-auto"
+                  className="mx-auto corporate-shadow"
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2 font-heading">Trust</h3>
@@ -537,7 +537,7 @@ export default function HomePage() {
                   alt="Expertise illustration"
                   width={80}
                   height={80}
-                  className="mx-auto"
+                  className="mx-auto corporate-shadow"
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2 font-heading">Expertise</h3>
@@ -552,7 +552,7 @@ export default function HomePage() {
                   alt="Innovation illustration"
                   width={80}
                   height={80}
-                  className="mx-auto"
+                  className="mx-auto corporate-shadow"
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2 font-heading">Innovation</h3>
@@ -567,7 +567,7 @@ export default function HomePage() {
                   alt="Global delivery illustration"
                   width={80}
                   height={80}
-                  className="mx-auto"
+                  className="mx-auto corporate-shadow"
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2 font-heading">Global Delivery</h3>
@@ -596,7 +596,7 @@ export default function HomePage() {
                   alt="Consult process illustration"
                   width={80}
                   height={80}
-                  className="mx-auto"
+                  className="mx-auto corporate-shadow"
                 />
               </div>
               <div className="w-12 h-12 bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 text-xl font-bold font-heading transition-all duration-300 hover:scale-110">
@@ -614,7 +614,7 @@ export default function HomePage() {
                   alt="Implement process illustration"
                   width={80}
                   height={80}
-                  className="mx-auto"
+                  className="mx-auto corporate-shadow"
                 />
               </div>
               <div className="w-12 h-12 bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 text-xl font-bold font-heading transition-all duration-300 hover:scale-110">
@@ -632,7 +632,7 @@ export default function HomePage() {
                   alt="Support process illustration"
                   width={80}
                   height={80}
-                  className="mx-auto"
+                  className="mx-auto corporate-shadow"
                 />
               </div>
               <div className="w-12 h-12 bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 text-xl font-bold font-heading transition-all duration-300 hover:scale-110">
@@ -650,7 +650,7 @@ export default function HomePage() {
                   alt="Scale process illustration"
                   width={80}
                   height={80}
-                  className="mx-auto"
+                  className="mx-auto corporate-shadow"
                 />
               </div>
               <div className="w-12 h-12 bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 text-xl font-bold font-heading transition-all duration-300 hover:scale-110">
@@ -682,7 +682,7 @@ export default function HomePage() {
               alt="Global presence world map"
               width={800}
               height={300}
-              className="w-full h-auto object-cover mx-auto"
+              className="w-full h-auto object-cover mx-auto corporate-shadow-lg"
             />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 text-center">
@@ -709,7 +709,7 @@ export default function HomePage() {
                 alt="Compliance and security illustration"
                 width={600}
                 height={200}
-                className="w-full h-auto object-cover mx-auto"
+                className="w-full h-auto object-cover mx-auto corporate-shadow-lg"
               />
             </div>
             <p className="text-lg text-muted-foreground mb-8 text-pretty leading-relaxed">
@@ -762,7 +762,7 @@ export default function HomePage() {
             size="lg"
             variant="secondary"
             asChild
-            className="font-heading btn-hover px-8 py-3"
+            className="btn-hover px-8 py-3"
           >
             <Link href="/contact">
               Schedule a Consultation <ArrowRight className="ml-2 h-4 w-4" />

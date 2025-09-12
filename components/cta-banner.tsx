@@ -22,7 +22,7 @@ export function CTABanner({ title, description, buttonText, buttonHref, variant 
         <Button
           size="lg"
           asChild
-          className="font-heading btn-hover"
+          className="btn-hover"
         >
           <Link href={buttonHref}>{buttonText}</Link>
         </Button>
