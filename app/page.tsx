@@ -27,9 +27,9 @@ export default function HomePage() {
     <div className="min-h-screen">
       <Header />
 
-      {/* 1. Hero Banner - Enhanced with corporate hero image */}
-      <section className="relative py-20 lg:py-32 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 1. Hero Banner */}
+      <section className="relative section-padding bg-background">
+        <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-2xl">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance font-heading tracking-tight">
@@ -43,7 +43,7 @@ export default function HomePage() {
               <Button
                 size="lg"
                 asChild
-                className="font-heading transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 px-8 py-3"
+                className="font-heading btn-hover px-8 py-3"
               >
                 <Link href="/contact">
                   Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
@@ -62,12 +62,11 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-muted/20 pointer-events-none" />
       </section>
 
-      {/* 2. Quick Company Intro - Enhanced with enterprise software illustration */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 2. Quick Company Intro */}
+      <section className="section-padding bg-muted">
+        <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-2xl">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance font-heading tracking-tight">
@@ -81,7 +80,7 @@ export default function HomePage() {
               <Button
                 variant="outline"
                 asChild
-                className="font-heading transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 bg-background border-2 hover:border-primary/30"
+                className="font-heading btn-hover bg-background border-2 hover:border-primary/30"
               >
                 <Link href="/about">Learn About Us</Link>
               </Button>
@@ -99,9 +98,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. Our Core Services - Enhanced card styling with icons already present */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 3. Our Core Services */}
+      <section className="section-padding bg-background">
+        <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance font-heading tracking-tight">
               Our Core Services
@@ -205,9 +204,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. Solutions Spotlight - Enhanced with solution images */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 4. Solutions Spotlight */}
+      <section className="section-padding bg-muted">
+        <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance font-heading tracking-tight">
               Solutions Spotlight
@@ -217,7 +216,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2 hover:border-primary/20 bg-background">
+            <Card className="card-hover border-2 hover:border-primary/20 bg-background">
               <CardHeader>
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
@@ -241,7 +240,7 @@ export default function HomePage() {
                 </div>
               </CardHeader>
             </Card>
-            <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2 hover:border-primary/20 bg-background">
+            <Card className="card-hover border-2 hover:border-primary/20 bg-background">
               <CardHeader>
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
@@ -264,7 +263,7 @@ export default function HomePage() {
                 </div>
               </CardHeader>
             </Card>
-            <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2 hover:border-primary/20 bg-background">
+            <Card className="card-hover border-2 hover:border-primary/20 bg-background">
               <CardHeader>
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
@@ -287,7 +286,7 @@ export default function HomePage() {
                 </div>
               </CardHeader>
             </Card>
-            <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2 hover:border-primary/20 bg-background">
+            <Card className="card-hover border-2 hover:border-primary/20 bg-background">
               <CardHeader>
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
@@ -314,9 +313,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. Our Products - Enhanced with product images */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 5. Our Products */}
+      <section className="section-padding bg-background">
+        <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance font-heading">Our Products</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
@@ -324,7 +323,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2 hover:border-primary/20">
+            <Card className="card-hover border-2 hover:border-primary/20">
               <CardHeader>
                 <div className="mb-4">
                   <Image
@@ -358,7 +357,7 @@ export default function HomePage() {
                 </ul>
               </CardContent>
             </Card>
-            <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2 hover:border-primary/20">
+            <Card className="card-hover border-2 hover:border-primary/20">
               <CardHeader>
                 <div className="mb-4">
                   <Image
@@ -392,7 +391,7 @@ export default function HomePage() {
                 </ul>
               </CardContent>
             </Card>
-            <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2 hover:border-primary/20">
+            <Card className="card-hover border-2 hover:border-primary/20">
               <CardHeader>
                 <div className="mb-4">
                   <Image
@@ -426,81 +425,13 @@ export default function HomePage() {
                 </ul>
               </CardContent>
             </Card>
-            <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2 hover:border-primary/20">
-              <CardHeader>
-                <div className="mb-4">
-                  <Image
-                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&h=200&fit=crop&crop=center"
-                    alt="Dealer Management System illustration"
-                    width={300}
-                    height={200}
-                    className="w-full h-32 object-cover"
-                  />
-                </div>
-                <CardTitle className="flex items-center space-x-2 font-heading">
-                  <Building2 className="h-5 w-5 text-primary" />
-                  <span>Dealer Management System</span>
-                </CardTitle>
-                <CardDescription>Smarter dealer collaboration and visibility.</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2 font-bold">•</span>
-                    Real-time inventory and sales tracking
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2 font-bold">•</span>
-                    Dealer claims and order management
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2 font-bold">•</span>
-                    Performance insights and reporting
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-            <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2 hover:border-primary/20">
-              <CardHeader>
-                <div className="mb-4">
-                  <Image
-                    src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&h=200&fit=crop&crop=center"
-                    alt="Order Management System illustration"
-                    width={300}
-                    height={200}
-                    className="w-full h-32 object-cover"
-                  />
-                </div>
-                <CardTitle className="flex items-center space-x-2 font-heading">
-                  <ShoppingCart className="h-5 w-5 text-primary" />
-                  <span>Order Management System</span>
-                </CardTitle>
-                <CardDescription>Seamless order-to-cash visibility and control.</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2 font-bold">•</span>
-                    Order capture, processing, and tracking
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2 font-bold">•</span>
-                    Integrated inventory and fulfillment
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2 font-bold">•</span>
-                    Faster, error-free deliveries
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
 
-      {/* 6. Industries We Serve - Enhanced with industry illustrations */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 6. Industries We Serve */}
+      <section className="section-padding bg-muted">
+        <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance font-heading tracking-tight">
               Industries We Serve
@@ -510,7 +441,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            <div className="text-center p-6 bg-background hover:bg-background/80 transition-all duration-300 hover:shadow-md hover:-translate-y-1 border-2 hover:border-primary/20">
+            <div className="text-center p-6 bg-background card-hover border-2 hover:border-primary/20">
               <div className="mb-4">
                 <Image
                   src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=60&h=60&fit=crop&crop=center"
@@ -522,7 +453,7 @@ export default function HomePage() {
               </div>
               <h3 className="font-semibold font-heading">Manufacturing</h3>
             </div>
-            <div className="text-center p-6 bg-background hover:bg-background/80 transition-all duration-300 hover:shadow-md hover:-translate-y-1 border-2 hover:border-primary/20">
+            <div className="text-center p-6 bg-background card-hover border-2 hover:border-primary/20">
               <div className="mb-4">
                 <Image
                   src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=60&h=60&fit=crop&crop=center"
@@ -534,7 +465,7 @@ export default function HomePage() {
               </div>
               <h3 className="font-semibold font-heading">BFSI</h3>
             </div>
-            <div className="text-center p-6 bg-background hover:bg-background/80 transition-all duration-300 hover:shadow-md hover:-translate-y-1 border-2 hover:border-primary/20">
+            <div className="text-center p-6 bg-background card-hover border-2 hover:border-primary/20">
               <div className="mb-4">
                 <Image
                   src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=60&h=60&fit=crop&crop=center"
@@ -546,7 +477,7 @@ export default function HomePage() {
               </div>
               <h3 className="font-semibold font-heading">Pharma</h3>
             </div>
-            <div className="text-center p-6 bg-background hover:bg-background/80 transition-all duration-300 hover:shadow-md hover:-translate-y-1 border-2 hover:border-primary/20">
+            <div className="text-center p-6 bg-background card-hover border-2 hover:border-primary/20">
               <div className="mb-4">
                 <Image
                   src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=60&h=60&fit=crop&crop=center"
@@ -558,7 +489,7 @@ export default function HomePage() {
               </div>
               <h3 className="font-semibold font-heading">Retail</h3>
             </div>
-            <div className="text-center p-6 bg-background hover:bg-background/80 transition-all duration-300 hover:shadow-md hover:-translate-y-1 border-2 hover:border-primary/20">
+            <div className="text-center p-6 bg-background card-hover border-2 hover:border-primary/20">
               <div className="mb-4">
                 <Image
                   src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=60&h=60&fit=crop&crop=center"
@@ -574,9 +505,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. Why Choose Infocure - Enhanced with value proposition illustrations */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 7. Why Choose Infocure */}
+      <section className="section-padding bg-background">
+        <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance font-heading">Why Choose Infocure</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
@@ -648,9 +579,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8. Our Approach - Enhanced with timeline icons and process illustrations */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 8. Our Approach */}
+      <section className="section-padding bg-muted">
+        <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance font-heading">Our Approach</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
@@ -734,9 +665,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 9. Global Presence - Enhanced with world map illustration */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 9. Global Presence */}
+      <section className="section-padding bg-background">
+        <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance font-heading tracking-tight">
               Global Presence
@@ -755,45 +686,19 @@ export default function HomePage() {
             />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 text-center">
-            <div className="p-4 bg-muted transition-all duration-300 hover:bg-muted/80 hover:shadow-md hover:-translate-y-1 border-2 hover:border-primary/20">
-              <Globe className="h-8 w-8 text-primary mx-auto mb-2" />
-              <div className="text-sm font-medium font-heading">Mumbai</div>
-            </div>
-            <div className="p-4 bg-muted transition-all duration-300 hover:bg-muted/80 hover:shadow-md hover:-translate-y-1 border-2 hover:border-primary/20">
-              <Globe className="h-8 w-8 text-primary mx-auto mb-2" />
-              <div className="text-sm font-medium font-heading">Bangalore</div>
-            </div>
-            <div className="p-4 bg-muted transition-all duration-300 hover:bg-muted/80 hover:shadow-md hover:-translate-y-1 border-2 hover:border-primary/20">
-              <Globe className="h-8 w-8 text-primary mx-auto mb-2" />
-              <div className="text-sm font-medium font-heading">Delhi NCR</div>
-            </div>
-            <div className="p-4 bg-muted transition-all duration-300 hover:bg-muted/80 hover:shadow-md hover:-translate-y-1 border-2 hover:border-primary/20">
-              <Globe className="h-8 w-8 text-primary mx-auto mb-2" />
-              <div className="text-sm font-medium font-heading">Kolkata</div>
-            </div>
-            <div className="p-4 bg-muted transition-all duration-300 hover:bg-muted/80 hover:shadow-md hover:-translate-y-1 border-2 hover:border-primary/20">
-              <Globe className="h-8 w-8 text-primary mx-auto mb-2" />
-              <div className="text-sm font-medium font-heading">Dubai</div>
-            </div>
-            <div className="p-4 bg-muted transition-all duration-300 hover:bg-muted/80 hover:shadow-md hover:-translate-y-1 border-2 hover:border-primary/20">
-              <Globe className="h-8 w-8 text-primary mx-auto mb-2" />
-              <div className="text-sm font-medium font-heading">Singapore</div>
-            </div>
-            <div className="p-4 bg-muted transition-all duration-300 hover:bg-muted/80 hover:shadow-md hover:-translate-y-1 border-2 hover:border-primary/20">
-              <Globe className="h-8 w-8 text-primary mx-auto mb-2" />
-              <div className="text-sm font-medium font-heading">Germany</div>
-            </div>
-            <div className="p-4 bg-muted transition-all duration-300 hover:bg-muted/80 hover:shadow-md hover:-translate-y-1 border-2 hover:border-primary/20">
-              <Globe className="h-8 w-8 text-primary mx-auto mb-2" />
-              <div className="text-sm font-medium font-heading">UK</div>
-            </div>
+            {["Mumbai", "Bangalore", "Delhi NCR", "Kolkata", "Dubai", "Singapore", "Germany", "UK"].map((location) => (
+              <div key={location} className="p-4 bg-muted card-hover border-2 hover:border-primary/20">
+                <Globe className="h-8 w-8 text-primary mx-auto mb-2" />
+                <div className="text-sm font-medium font-heading">{location}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 10. Compliance & Security - Enhanced with security illustrations */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 10. Compliance & Security */}
+      <section className="section-padding bg-muted">
+        <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance font-heading tracking-tight">
               Compliance & Security
@@ -834,8 +739,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 11. Final CTA Banner - Enhanced with background image */}
-      <section className="relative py-16 bg-primary text-primary-foreground overflow-hidden">
+      {/* 11. Final CTA Banner */}
+      <section className="relative section-padding bg-primary text-primary-foreground overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=400&fit=crop&crop=center"
@@ -845,7 +750,7 @@ export default function HomePage() {
             className="w-full h-full object-cover opacity-20"
           />
         </div>
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance font-heading">
             Ready to Transform Your Business?
           </h2>
@@ -857,7 +762,7 @@ export default function HomePage() {
             size="lg"
             variant="secondary"
             asChild
-            className="font-heading transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 px-8 py-3"
+            className="font-heading btn-hover px-8 py-3"
           >
             <Link href="/contact">
               Schedule a Consultation <ArrowRight className="ml-2 h-4 w-4" />
@@ -866,7 +771,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 12. Footer */}
       <Footer />
     </div>
   )

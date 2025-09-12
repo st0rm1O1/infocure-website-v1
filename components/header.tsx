@@ -52,7 +52,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container-custom">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
             <div className="text-2xl font-heading font-bold text-primary">Infocure</div>
@@ -70,7 +70,7 @@ export function Header() {
                       <NavigationMenuLink key={service.name} asChild>
                         <Link
                           href={service.href}
-                          className="block select-none space-y-1 p-3 leading-none no-underline outline-none transition-all duration-300 hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground hover:shadow-md hover:-translate-y-0.5"
+                          className="block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         >
                           <div className="text-sm font-medium leading-none">{service.name}</div>
                         </Link>
@@ -88,7 +88,7 @@ export function Header() {
                       <NavigationMenuLink key={solution.name} asChild>
                         <Link
                           href={solution.href}
-                          className="block select-none space-y-1 p-3 leading-none no-underline outline-none transition-all duration-300 hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground hover:shadow-md hover:-translate-y-0.5"
+                          className="block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         >
                           <div className="text-sm font-medium leading-none">{solution.name}</div>
                         </Link>
@@ -106,7 +106,7 @@ export function Header() {
                       <NavigationMenuLink key={product.name} asChild>
                         <Link
                           href={product.href}
-                          className="block select-none space-y-1 p-3 leading-none no-underline outline-none transition-all duration-300 hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground hover:shadow-md hover:-translate-y-0.5"
+                          className="block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         >
                           <div className="text-sm font-medium leading-none">{product.name}</div>
                         </Link>
@@ -121,7 +121,7 @@ export function Header() {
                   <Link
                     href="/about"
                     className={cn(
-                      "group inline-flex h-10 w-max items-center justify-center bg-background px-4 py-2 text-sm font-medium font-heading transition-all duration-300 hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",
+                      "group inline-flex h-10 w-max items-center justify-center bg-background px-4 py-2 text-sm font-medium font-heading transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
                     )}
                   >
                     About
@@ -134,7 +134,7 @@ export function Header() {
                   <Link
                     href="/contact"
                     className={cn(
-                      "group inline-flex h-10 w-max items-center justify-center bg-background px-4 py-2 text-sm font-medium font-heading transition-all duration-300 hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",
+                      "group inline-flex h-10 w-max items-center justify-center bg-background px-4 py-2 text-sm font-medium font-heading transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
                     )}
                   >
                     Contact
@@ -145,7 +145,7 @@ export function Header() {
           </NavigationMenu>
 
           <div className="hidden lg:flex">
-            <Button asChild className="font-heading transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
+            <Button asChild className="font-heading btn-hover">
               <Link href="/contact">Get in Touch</Link>
             </Button>
           </div>

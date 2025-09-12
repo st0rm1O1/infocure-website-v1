@@ -3,7 +3,7 @@ import Link from "next/link"
 export function Footer() {
   return (
     <footer className="bg-secondary text-secondary-foreground">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="container-custom py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company */}
           <div>
@@ -12,7 +12,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-sm hover:text-primary transition-all duration-300 hover:translate-x-1"
+                  className="text-sm hover:text-primary transition-colors"
                 >
                   About Us
                 </Link>
@@ -20,7 +20,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-sm hover:text-primary transition-all duration-300 hover:translate-x-1"
+                  className="text-sm hover:text-primary transition-colors"
                 >
                   Contact
                 </Link>
@@ -28,7 +28,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/careers"
-                  className="text-sm hover:text-primary transition-all duration-300 hover:translate-x-1"
+                  className="text-sm hover:text-primary transition-colors"
                 >
                   Careers
                 </Link>
@@ -43,7 +43,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/services/sap-consultation"
-                  className="hover:text-primary transition-all duration-300 hover:translate-x-1"
+                  className="hover:text-primary transition-colors"
                 >
                   SAP Services
                 </Link>
@@ -51,7 +51,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/services/oracle-ebs"
-                  className="hover:text-primary transition-all duration-300 hover:translate-x-1"
+                  className="hover:text-primary transition-colors"
                 >
                   Oracle Services
                 </Link>
@@ -59,7 +59,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/services/salesforce"
-                  className="hover:text-primary transition-all duration-300 hover:translate-x-1"
+                  className="hover:text-primary transition-colors"
                 >
                   Salesforce
                 </Link>
@@ -67,7 +67,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/services/artificial-intelligence"
-                  className="hover:text-primary transition-all duration-300 hover:translate-x-1"
+                  className="hover:text-primary transition-colors"
                 >
                   Artificial Intelligence
                 </Link>
@@ -75,7 +75,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/services/rpa"
-                  className="hover:text-primary transition-all duration-300 hover:translate-x-1"
+                  className="hover:text-primary transition-colors"
                 >
                   RPA
                 </Link>
@@ -83,7 +83,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/services/custom-software-development"
-                  className="hover:text-primary transition-all duration-300 hover:translate-x-1"
+                  className="hover:text-primary transition-colors"
                 >
                   Custom Development
                 </Link>
@@ -98,7 +98,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/solutions/rise-with-sap"
-                  className="hover:text-primary transition-all duration-300 hover:translate-x-1"
+                  className="hover:text-primary transition-colors"
                 >
                   S/4 HANA RISE
                 </Link>
@@ -106,7 +106,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/solutions/sap-analytics-cloud"
-                  className="hover:text-primary transition-all duration-300 hover:translate-x-1"
+                  className="hover:text-primary transition-colors"
                 >
                   SAP Analytics Cloud
                 </Link>
@@ -114,7 +114,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/solutions/hcm-successfactors"
-                  className="hover:text-primary transition-all duration-300 hover:translate-x-1"
+                  className="hover:text-primary transition-colors"
                 >
                   SAP HCM & SuccessFactors
                 </Link>
@@ -122,7 +122,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/solutions/sap-fiori"
-                  className="hover:text-primary transition-all duration-300 hover:translate-x-1"
+                  className="hover:text-primary transition-colors"
                 >
                   SAP Fiori
                 </Link>
@@ -137,7 +137,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/products/crm"
-                  className="hover:text-primary transition-all duration-300 hover:translate-x-1"
+                  className="hover:text-primary transition-colors"
                 >
                   CRM
                 </Link>
@@ -145,7 +145,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/products/erp"
-                  className="hover:text-primary transition-all duration-300 hover:translate-x-1"
+                  className="hover:text-primary transition-colors"
                 >
                   ERP
                 </Link>
@@ -153,7 +153,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/products/hrms"
-                  className="hover:text-primary transition-all duration-300 hover:translate-x-1"
+                  className="hover:text-primary transition-colors"
                 >
                   HRMS
                 </Link>
@@ -161,7 +161,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/products/dealer-management-system"
-                  className="hover:text-primary transition-all duration-300 hover:translate-x-1"
+                  className="hover:text-primary transition-colors"
                 >
                   Dealer Management
                 </Link>
@@ -169,7 +169,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/products/order-management-system"
-                  className="hover:text-primary transition-all duration-300 hover:translate-x-1"
+                  className="hover:text-primary transition-colors"
                 >
                   Order Management
                 </Link>
