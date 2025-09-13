@@ -15,91 +15,99 @@ import {
   Settings,
   Factory,
   Globe,
+  Shield,
+  Zap,
 } from "lucide-react"
 
 export default function ERPPage() {
   const modules = [
     {
       icon: DollarSign,
-      title: "Financial Management",
-      description: "Complete accounting, budgeting, and financial reporting with real-time insights",
+      title: "Finance & Accounting",
+      description: "General ledger, accounts payable/receivable, fixed assets, budgeting, forecasting, and cash flow management",
     },
     {
       icon: Package,
-      title: "Inventory Management",
-      description: "Advanced inventory tracking, optimization, and automated reorder management",
+      title: "Materials Management (MM)",
+      description: "Procurement management, inventory tracking, warehouse optimization, and supplier performance monitoring",
     },
     {
       icon: Truck,
-      title: "Supply Chain",
-      description: "End-to-end supply chain visibility with vendor management and procurement",
+      title: "Production Planning (PP)",
+      description: "End-to-end manufacturing planning, BOM management, shop floor control, and demand forecasting",
     },
     {
       icon: Factory,
-      title: "Manufacturing",
-      description: "Production planning, quality control, and shop floor management systems",
+      title: "Sales & Distribution (SD)",
+      description: "Customer order management, pricing, logistics, delivery tracking, and CRM integration",
     },
     {
       icon: Users,
-      title: "Human Resources",
-      description: "Integrated HR management with payroll, benefits, and performance tracking",
+      title: "HRMS & Payroll",
+      description: "Employee lifecycle management, attendance, automated payroll with statutory compliance",
     },
     {
       icon: BarChart3,
       title: "Business Intelligence",
-      description: "Advanced analytics, reporting, and predictive insights for strategic decisions",
+      description: "Real-time dashboards, customizable reports, and predictive analytics for smarter decision-making",
     },
   ]
 
   const benefits = [
-    { metric: "45%", description: "Reduction in Operational Costs" },
-    { metric: "60%", description: "Faster Financial Reporting" },
-    { metric: "30%", description: "Improvement in Inventory Turnover" },
-    { metric: "50%", description: "Increase in Process Efficiency" },
+    { metric: "Oracle-Certified", description: "Backed by Oracle's proven ERP technology" },
+    { metric: "End-to-End Coverage", description: "Finance, HR, Supply Chain, Sales, Payroll" },
+    { metric: "Customizable & Scalable", description: "Adapt ERP workflows as your business grows" },
+    { metric: "Cost-Effective", description: "Enterprise-level features without enterprise costs" },
   ]
 
-  const industries = ["Manufacturing", "Distribution", "Retail", "Healthcare", "Construction", "Professional Services"]
+  const industries = ["Manufacturing", "Retail & Distribution", "Professional Services", "Healthcare & Pharma", "Logistics & Supply Chain", "BFSI"]
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-secondary text-secondary-foreground section-padding overflow-hidden">
-        <div className="container-custom">
+      <section className="relative py-24 lg:py-32 bg-gray-900 text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&h=600&fit=crop&crop=center"
+            alt="ERP hero background"
+            width={1400}
+            height={600}
+            className="w-full h-full object-cover opacity-30"
+          />
+        </div>
+        <div className="container mx-auto px-6 lg:px-8 relative">
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h1 className="text-5xl font-bold mb-6 font-heading text-balance">
-                  Unify Your Business Operations with Intelligent ERP
+                <h1 className="text-5xl lg:text-6xl font-bold mb-8 text-white tracking-tight leading-tight">
+                  ERP Solutions for Small and Medium Enterprises
                 </h1>
-                <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                  Streamline your entire business ecosystem with our comprehensive ERP platform. From finance to
-                  manufacturing, get real-time visibility and control over every aspect of your operations.
+                <p className="text-xl lg:text-2xl text-gray-300 mb-10 leading-relaxed">
+                  Oracle-Certified ERP, Customized for Growth and Agility. Unlike rigid, one-size-fits-all systems, our ERP is fully customizable, scalable, and cost-effective—helping SMBs manage every aspect of their operations with enterprise-grade power.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button
-                    size="lg"
-                    className="btn-hover px-8 py-3"
-                  >
-                    Request Demo
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                <div className="flex flex-col sm:flex-row gap-6">
+                  <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white px-10 py-4 text-lg">
+                    Contact Us
+                    <ArrowRight className="ml-3 h-6 w-6" />
                   </Button>
                   <Button
                     size="lg"
                     variant="outline"
-                    className="btn-hover px-8 py-3"
+                    className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-10 py-4 text-lg bg-transparent"
                   >
-                    View Pricing
+                    View Demo
                   </Button>
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-primary/20 to-transparent p-8">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-transparent rounded-none"></div>
                 <Image
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center"
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&h=500&fit=crop&crop=center"
                   alt="ERP Dashboard Interface"
-                  width={600}
-                  height={400}
+                  width={700}
+                  height={500}
                   className="w-full h-auto shadow-2xl"
                 />
               </div>
@@ -108,59 +116,32 @@ export default function ERPPage() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="section-padding bg-background">
-        <div className="container-custom">
+      {/* Key Modules */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-foreground mb-4 font-heading">
-                Measurable Business Impact
+            <div className="text-center mb-20">
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8 tracking-tight">
+                Key Modules in Our ERP
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Organizations using our ERP solution see significant improvements across key business metrics
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Comprehensive modules that work together to provide complete business management capabilities
               </p>
             </div>
 
-            <div className="grid md:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2 font-heading">
-                    {benefit.metric}
-                  </div>
-                  <p className="text-muted-foreground">{benefit.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Modules Section */}
-      <section className="section-padding bg-muted">
-        <div className="container-custom">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-foreground mb-4 font-heading">
-                Comprehensive ERP Modules
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Integrated modules that work together to provide complete business management capabilities
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {modules.map((module, index) => (
-                <Card key={index} className="border-0 bg-background shadow-lg card-hover group">
+                <Card key={index} className="border-0 bg-white shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
                   <CardHeader>
-                    <div className="p-3 bg-primary/10 w-fit mb-4 group-hover:bg-primary/20 transition-colors duration-300">
-                      <module.icon className="h-8 w-8 text-primary" />
+                    <div className="p-4 bg-red-100 w-fit mb-6 group-hover:bg-red-200 group-hover:scale-110 transition-all duration-300">
+                      <module.icon className="h-10 w-10 text-red-500" />
                     </div>
-                    <CardTitle className="text-xl font-bold text-foreground font-heading">
+                    <CardTitle className="text-2xl font-bold text-gray-900">
                       {module.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">{module.description}</p>
+                    <p className="text-gray-600 leading-relaxed">{module.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -169,39 +150,67 @@ export default function ERPPage() {
         </div>
       </section>
 
-      {/* Industries Section */}
-      <section className="section-padding bg-background">
-        <div className="container-custom">
+      {/* Why Choose Our ERP */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8 tracking-tight">
+                Why Choose Infocure's ERP for SMBs?
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Enterprise-level ERP features designed specifically for small and medium businesses
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="p-8 bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <div className="text-2xl font-bold text-red-500 mb-4">
+                    {benefit.metric}
+                  </div>
+                  <p className="text-gray-600 text-lg leading-relaxed">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Industries Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="text-4xl font-bold text-foreground mb-6 font-heading">
-                  Built for Every Industry
+                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8 tracking-tight">
+                  Industries We Empower
                 </h2>
-                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                <p className="text-xl text-gray-600 mb-10 leading-relaxed">
                   Our ERP solution is designed to meet the unique requirements of various industries, with specialized
                   features and workflows tailored to your business needs.
                 </p>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {industries.map((industry, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                      <span>{industry}</span>
+                    <div key={index} className="flex items-center gap-4">
+                      <CheckCircle className="h-6 w-6 text-red-500 flex-shrink-0" />
+                      <span className="text-lg text-gray-700">{industry}</span>
                     </div>
                   ))}
                 </div>
-                <Button className="mt-8 btn-hover">
+                <Button className="mt-10 bg-red-500 hover:bg-red-600 text-white px-8 py-3 text-lg">
                   Explore Industry Solutions
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-3 h-5 w-5" />
                 </Button>
               </div>
               <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-transparent rounded-none"></div>
                 <Image
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center"
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&h-500&fit=crop&crop=center"
                   alt="ERP Industry Solutions"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto shadow-lg"
+                  width={700}
+                  height={500}
+                  className="w-full h-auto shadow-2xl"
                 />
               </div>
             </div>
@@ -210,30 +219,35 @@ export default function ERPPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-secondary text-secondary-foreground">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6 font-heading text-balance">
-              Transform Your Business Operations Today
+      <section className="relative py-24 bg-gray-900 text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&h=600&fit=crop&crop=center"
+            alt="CTA background"
+            width={1400}
+            height={600}
+            className="w-full h-full object-cover opacity-30"
+          />
+        </div>
+        <div className="container mx-auto px-6 lg:px-8 relative">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-4xl lg:text-6xl font-bold mb-8 text-white tracking-tight">
+              Ready to take your SMB to the next level?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Join leading enterprises who have streamlined their operations and accelerated growth with our ERP
-              platform
+            <p className="text-xl lg:text-2xl text-gray-300 mb-12 leading-relaxed">
+              Contact Us today to explore how Infocure's customized ERP can transform your operations
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="btn-hover px-8 py-3"
-              >
-                Schedule Implementation Call
-                <ArrowRight className="ml-2 h-5 w-5" />
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white px-10 py-4 text-lg">
+                Contact Us Today
+                <ArrowRight className="ml-3 h-6 w-6" />
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="btn-hover px-8 py-3"
+                className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-10 py-4 text-lg bg-transparent"
               >
-                Download ERP Guide
+                Download Brochure
               </Button>
             </div>
           </div>

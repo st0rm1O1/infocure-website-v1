@@ -40,16 +40,16 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Header />
 
       {/* Hero Section */}
-      <section className="relative section-padding bg-white overflow-hidden">
+      <section className="relative py-24 lg:py-32 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white"></div>
-        <div className="container-custom relative">
-          <div className="max-w-5xl mx-auto text-center">
-            <h1 className="text-5xl lg:text-6xl font-heading font-bold mb-8 text-gray-900">Get in Touch</h1>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto text-pretty leading-relaxed">
+        <div className="container mx-auto px-6 lg:px-8 relative">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl lg:text-7xl font-bold mb-12 text-gray-900 tracking-tight leading-none">Get in Touch</h1>
+            <p className="text-xl lg:text-2xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
               Get in touch and discover how Infocure can accelerate your digital journey. We're here to help you
               transform your business with trusted technology expertise.
             </p>
@@ -58,37 +58,37 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Information & Form */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-heading font-bold mb-10 text-gray-900">Direct Contact Information</h2>
+              <h2 className="text-4xl font-bold mb-12 text-gray-900 tracking-tight">Direct Contact Information</h2>
               <div className="space-y-8">
-                <Card className="corporate-card corporate-card-hover">
+                <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg">
                   <CardHeader>
-                    <CardTitle className="flex items-center space-x-4 font-heading text-xl">
-                      <Phone className="h-6 w-6 text-red-500" />
+                    <CardTitle className="flex items-center space-x-4 text-2xl">
+                      <Phone className="h-8 w-8 text-red-500" />
                       <span>Phone</span>
                     </CardTitle>
                     <CardDescription>
-                      <a href="tel:+919136190148" className="text-lg font-medium hover:text-red-500 transition-colors">
+                      <a href="tel:+919136190148" className="text-xl font-medium hover:text-red-500 transition-colors">
                         +91 91361 90148
                       </a>
                     </CardDescription>
                   </CardHeader>
                 </Card>
 
-                <Card className="corporate-card corporate-card-hover">
+                <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg">
                   <CardHeader>
-                    <CardTitle className="flex items-center space-x-4 font-heading text-xl">
-                      <Mail className="h-6 w-6 text-red-500" />
+                    <CardTitle className="flex items-center space-x-4 text-2xl">
+                      <Mail className="h-8 w-8 text-red-500" />
                       <span>Email</span>
                     </CardTitle>
                     <CardDescription>
                       <a
                         href="mailto:solutions@infocure.in"
-                        className="text-lg font-medium hover:text-red-500 transition-colors"
+                        className="text-xl font-medium hover:text-red-500 transition-colors"
                       >
                         solutions@infocure.in
                       </a>
@@ -96,14 +96,14 @@ export default function ContactPage() {
                   </CardHeader>
                 </Card>
 
-                <Card className="corporate-card corporate-card-hover">
+                <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg">
                   <CardHeader>
-                    <CardTitle className="flex items-center space-x-4 font-heading text-xl">
-                      <MapPin className="h-6 w-6 text-red-500" />
+                    <CardTitle className="flex items-center space-x-4 text-2xl">
+                      <MapPin className="h-8 w-8 text-red-500" />
                       <span>India Offices</span>
                     </CardTitle>
                     <CardDescription>
-                      <div className="space-y-2 text-base">
+                      <div className="space-y-2 text-lg">
                         <div>Mumbai</div>
                         <div>Bangalore</div>
                         <div>Delhi NCR</div>
@@ -113,14 +113,14 @@ export default function ContactPage() {
                   </CardHeader>
                 </Card>
 
-                <Card className="corporate-card corporate-card-hover">
+                <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg">
                   <CardHeader>
-                    <CardTitle className="flex items-center space-x-4 font-heading text-xl">
-                      <Globe className="h-6 w-6 text-red-500" />
+                    <CardTitle className="flex items-center space-x-4 text-2xl">
+                      <Globe className="h-8 w-8 text-red-500" />
                       <span>International Offices</span>
                     </CardTitle>
                     <CardDescription>
-                      <div className="space-y-2 text-base">
+                      <div className="space-y-2 text-lg">
                         <div>Dubai</div>
                         <div>Singapore</div>
                         <div>Germany</div>
@@ -135,17 +135,17 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div>
-              <Card className="corporate-card">
+              <Card className="border-0 shadow-xl">
                 <CardHeader>
-                  <CardTitle className="text-2xl font-heading">Send us a Message</CardTitle>
-                  <CardDescription className="text-base">
+                  <CardTitle className="text-3xl">Send us a Message</CardTitle>
+                  <CardDescription className="text-lg">
                     Fill out the form below and we'll get back to you within 24 hours to discuss your requirements.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="name" className="font-heading font-medium">
+                  <form onSubmit={handleSubmit} className="space-y-8">
+                    <div className="space-y-3">
+                      <Label htmlFor="name" className="text-lg font-medium">
                         Name *
                       </Label>
                       <Input
@@ -156,12 +156,12 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="transition-all duration-300 focus:shadow-md"
+                        className="h-14 text-lg"
                       />
                     </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="email" className="font-heading font-medium">
+                    <div className="space-y-3">
+                      <Label htmlFor="email" className="text-lg font-medium">
                         Email *
                       </Label>
                       <Input
@@ -172,12 +172,12 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="transition-all duration-300 focus:shadow-md"
+                        className="h-14 text-lg"
                       />
                     </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="phone" className="font-heading font-medium">
+                    <div className="space-y-3">
+                      <Label htmlFor="phone" className="text-lg font-medium">
                         Phone
                       </Label>
                       <Input
@@ -187,12 +187,12 @@ export default function ContactPage() {
                         placeholder="+1 (555) 123-4567"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="transition-all duration-300 focus:shadow-md"
+                        className="h-14 text-lg"
                       />
                     </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="message" className="font-heading font-medium">
+                    <div className="space-y-3">
+                      <Label htmlFor="message" className="text-lg font-medium">
                         Message *
                       </Label>
                       <Textarea
@@ -203,15 +203,15 @@ export default function ContactPage() {
                         value={formData.message}
                         onChange={handleInputChange}
                         required
-                        className="transition-all duration-300 focus:shadow-md"
+                        className="text-lg"
                       />
                     </div>
 
                     <Button
                       type="submit"
-                      className="btn-primary w-full text-lg py-3"
+                      className="bg-red-500 hover:bg-red-600 text-white w-full text-lg py-4 font-medium"
                     >
-                      <Send className="mr-3 h-5 w-5" />
+                      <Send className="mr-3 h-6 w-6" />
                       Send Message
                     </Button>
                   </form>
@@ -223,29 +223,29 @@ export default function ContactPage() {
       </section>
 
       {/* Global Office Locations */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6 text-gray-900">Our Global Presence</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-pretty">
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl lg:text-6xl font-bold mb-8 text-gray-900 tracking-tight">Our Global Presence</h2>
+            <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               With offices across multiple continents, we provide local expertise backed by global delivery
               capabilities.
             </p>
           </div>
-          <div className="mb-12">
+          <div className="mb-16">
             <Image
-              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1000&h=400&fit=crop&crop=center"
+              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&h-500&fit=crop&crop=center"
               alt="Global presence world map"
-              width={1000}
-              height={400}
-              className="w-full h-auto object-cover mx-auto corporate-shadow-lg"
+              width={1200}
+              height={500}
+              className="w-full h-auto object-cover mx-auto shadow-2xl"
             />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 text-center">
             {["Mumbai", "Bangalore", "Delhi NCR", "Kolkata", "Dubai", "Singapore", "Germany", "UK"].map((location) => (
-              <div key={location} className="p-6 bg-gray-50 corporate-card corporate-card-hover">
-                <Globe className="h-10 w-10 text-red-500 mx-auto mb-3" />
-                <div className="text-sm font-heading font-medium text-gray-900">{location}</div>
+              <div key={location} className="p-6 bg-gray-50 hover:bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                <Globe className="h-12 w-12 text-red-500 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <div className="text-sm font-bold text-gray-900">{location}</div>
               </div>
             ))}
           </div>
@@ -257,6 +257,7 @@ export default function ContactPage() {
         description="Ready to discuss your project? Our experts are standing by to help you accelerate your digital transformation journey."
         buttonText="Get in Touch"
         buttonHref="/contact"
+        variant="dark"
       />
 
       <Footer />
