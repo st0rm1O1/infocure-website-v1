@@ -1,6 +1,7 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ServiceCard } from "@/components/service-card"
+import { CTABanner } from "@/components/cta-banner"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
@@ -19,7 +20,18 @@ import {
   CheckCircle,
   ArrowRight,
   Building2,
+  TrendingUp,
+  Target,
+  Award,
+  Phone,
+  Mail,
+  MapPin,
+  BarChart3,
+  Factory,
+  Heart,
+  Banknote,
   ShoppingCart,
+  GraduationCap,
 } from "lucide-react"
 
 export default function HomePage() {
@@ -28,33 +40,30 @@ export default function HomePage() {
       <Header />
 
       {/* 1. Hero Banner */}
-      <section className="relative section-padding bg-background">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="relative section-padding bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white"></div>
+        <div className="container-custom relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="max-w-2xl">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance font-heading tracking-tight">
+              <h1 className="text-5xl lg:text-6xl font-heading font-bold mb-8 text-gray-900 text-balance">
                 Driving innovation with trust and technology.
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-8 text-pretty leading-relaxed">
+              <p className="text-xl text-gray-600 mb-10 text-pretty leading-relaxed">
                 Since 2014, Infocure Technologies has helped businesses solve complex challenges, rethink how they work,
                 and prepare for the future. Guided by a strong ethical foundation and a commitment to measurable impact,
                 we partner with organizations to unlock opportunities and create lasting value.
               </p>
-              <Button
-                size="lg"
-                asChild
-                className="btn-hover px-8 py-3"
-              >
+              <Button asChild className="btn-primary text-lg px-10 py-4">
                 <Link href="/contact">
-                  Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
+                  Get in Touch <ArrowRight className="ml-3 h-5 w-5" />
                 </Link>
               </Button>
             </div>
             <div className="relative">
               <Image
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=500&fit=crop&crop=center"
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=700&h=500&fit=crop&crop=center"
                 alt="Corporate team collaborating with technology"
-                width={600}
+                width={700}
                 height={500}
                 className="w-full h-auto object-cover corporate-shadow-lg"
                 priority
@@ -65,51 +74,47 @@ export default function HomePage() {
       </section>
 
       {/* 2. Quick Company Intro */}
-      <section className="section-padding bg-muted">
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative">
+              <Image
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=450&fit=crop&crop=center"
+                alt="Enterprise software consulting illustration"
+                width={600}
+                height={450}
+                className="w-full h-auto object-cover corporate-shadow-lg"
+              />
+            </div>
             <div className="max-w-2xl">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance font-heading tracking-tight">
+              <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-8 text-gray-900 text-balance">
                 Develop | Implement | Support Mission-Critical Software
               </h2>
-              <p className="text-lg text-muted-foreground mb-8 text-pretty leading-relaxed">
+              <p className="text-lg text-gray-600 mb-8 text-pretty leading-relaxed">
                 At Infocure Technologies, we specialize in SAP and enterprise solutions that power critical business
                 functions. Our team designs, implements, and supports systems that streamline operations, reduce risk,
                 and enable digital transformation—helping you stay agile and future-ready.
               </p>
-              <Button
-                variant="outline"
-                asChild
-                className="btn-hover bg-background border-2 hover:border-primary/30"
-              >
+              <Button asChild className="btn-secondary">
                 <Link href="/about">Learn About Us</Link>
               </Button>
-            </div>
-            <div className="relative">
-              <Image
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=400&fit=crop&crop=center"
-                alt="Enterprise software consulting illustration"
-                width={500}
-                height={400}
-                className="w-full h-auto object-cover corporate-shadow-lg"
-              />
             </div>
           </div>
         </div>
       </section>
 
       {/* 3. Our Core Services */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance font-heading tracking-tight">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6 text-gray-900 text-balance">
               Our Core Services
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-pretty">
               Enterprise-grade IT services designed to help organizations modernize, scale, and grow.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard
               title="SAP Services & Solutions"
               description="End-to-end SAP expertise to power your enterprise."
@@ -205,34 +210,34 @@ export default function HomePage() {
       </section>
 
       {/* 4. Solutions Spotlight */}
-      <section className="section-padding bg-muted">
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance font-heading tracking-tight">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6 text-gray-900 text-balance">
               Solutions Spotlight
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-pretty">
               Proven SAP solutions that drive business transformation and operational excellence.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card className="card-hover border-2 hover:border-primary/20 bg-background">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="corporate-card corporate-card-hover">
               <CardHeader>
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start space-x-6">
                   <div className="flex-shrink-0">
                     <Image
-                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=80&h=80&fit=crop&crop=center"
+                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=100&h=100&fit=crop&crop=center"
                       alt="SAP RISE illustration"
-                      width={80}
-                      height={80}
+                      width={100}
+                      height={100}
                       className="object-cover corporate-shadow"
                     />
                   </div>
                   <div>
-                    <CardTitle className="flex items-center space-x-2 font-heading">
-                      <span>S/4HANA Rise – Private & Public Cloud</span>
+                    <CardTitle className="text-xl font-heading mb-3">
+                      S/4HANA Rise – Private & Public Cloud
                     </CardTitle>
-                    <CardDescription>
+                    <CardDescription className="text-base">
                       Accelerate your move to an intelligent enterprise with SAP RISE for comprehensive cloud
                       transformation.
                     </CardDescription>
@@ -240,69 +245,69 @@ export default function HomePage() {
                 </div>
               </CardHeader>
             </Card>
-            <Card className="card-hover border-2 hover:border-primary/20 bg-background">
+            <Card className="corporate-card corporate-card-hover">
               <CardHeader>
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start space-x-6">
                   <div className="flex-shrink-0">
                     <Image
-                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=80&h=80&fit=crop&crop=center"
+                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=100&h=100&fit=crop&crop=center"
                       alt="SAP Analytics Cloud illustration"
-                      width={80}
-                      height={80}
+                      width={100}
+                      height={100}
                       className="object-cover corporate-shadow"
                     />
                   </div>
                   <div>
-                    <CardTitle className="flex items-center space-x-2 font-heading">
-                      <span>SAP Analytics Cloud (SAC)</span>
+                    <CardTitle className="text-xl font-heading mb-3">
+                      SAP Analytics Cloud (SAC)
                     </CardTitle>
-                    <CardDescription>
+                    <CardDescription className="text-base">
                       Turn data into real-time business insights with SAP's all-in-one cloud analytics platform.
                     </CardDescription>
                   </div>
                 </div>
               </CardHeader>
             </Card>
-            <Card className="card-hover border-2 hover:border-primary/20 bg-background">
+            <Card className="corporate-card corporate-card-hover">
               <CardHeader>
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start space-x-6">
                   <div className="flex-shrink-0">
                     <Image
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=center"
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=center"
                       alt="SAP HCM SuccessFactors illustration"
-                      width={80}
-                      height={80}
+                      width={100}
+                      height={100}
                       className="object-cover corporate-shadow"
                     />
                   </div>
                   <div>
-                    <CardTitle className="flex items-center space-x-2 font-heading">
-                      <span>SAP HCM & SuccessFactors</span>
+                    <CardTitle className="text-xl font-heading mb-3">
+                      SAP HCM & SuccessFactors
                     </CardTitle>
-                    <CardDescription>
+                    <CardDescription className="text-base">
                       Modernize HR for today's workforce with comprehensive human capital management solutions.
                     </CardDescription>
                   </div>
                 </div>
               </CardHeader>
             </Card>
-            <Card className="card-hover border-2 hover:border-primary/20 bg-background">
+            <Card className="corporate-card corporate-card-hover">
               <CardHeader>
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start space-x-6">
                   <div className="flex-shrink-0">
                     <Image
-                      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=80&h=80&fit=crop&crop=center"
+                      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=100&h=100&fit=crop&crop=center"
                       alt="SAP Fiori illustration"
-                      width={80}
-                      height={80}
+                      width={100}
+                      height={100}
                       className="object-cover corporate-shadow"
                     />
                   </div>
                   <div>
-                    <CardTitle className="flex items-center space-x-2 font-heading">
-                      <span>SAP Fiori</span>
+                    <CardTitle className="text-xl font-heading mb-3">
+                      SAP Fiori
                     </CardTitle>
-                    <CardDescription>
+                    <CardDescription className="text-base">
                       Deliver modern, role-based user experiences across SAP with intuitive and responsive design.
                     </CardDescription>
                   </div>
@@ -314,115 +319,124 @@ export default function HomePage() {
       </section>
 
       {/* 5. Our Products */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance font-heading">Our Products</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6 text-gray-900">Our Products</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-pretty">
               Build a smarter enterprise with Infocure's suite of products designed for operational excellence.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="card-hover border-2 hover:border-primary/20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="corporate-card corporate-card-hover">
               <CardHeader>
-                <div className="mb-4">
+                <div className="mb-6">
                   <Image
-                    src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=300&h=200&fit=crop&crop=center"
+                    src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=400&h=250&fit=crop&crop=center"
                     alt="CRM Product illustration"
-                    width={300}
-                    height={200}
-                    className="w-full h-32 object-cover corporate-shadow"
+                    width={400}
+                    height={250}
+                    className="w-full h-40 object-cover corporate-shadow"
                   />
                 </div>
-                <CardTitle className="flex items-center space-x-2 font-heading">
-                  <Users className="h-5 w-5 text-primary" />
+                <CardTitle className="flex items-center space-x-3 font-heading text-xl mb-3">
+                  <Users className="h-6 w-6 text-red-500" />
                   <span>CRM</span>
                 </CardTitle>
-                <CardDescription>Stronger customer relationships, smarter sales.</CardDescription>
+                <CardDescription className="text-base mb-4">Stronger customer relationships, smarter sales.</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <ul className="space-y-2 text-sm text-gray-600 mb-6">
                   <li className="flex items-start">
-                    <span className="text-primary mr-2 font-bold">•</span>
+                    <CheckCircle className="h-4 w-4 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
                     360° customer view and insights
                   </li>
                   <li className="flex items-start">
-                    <span className="text-primary mr-2 font-bold">•</span>
+                    <CheckCircle className="h-4 w-4 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
                     Sales and marketing automation
                   </li>
                   <li className="flex items-start">
-                    <span className="text-primary mr-2 font-bold">•</span>
+                    <CheckCircle className="h-4 w-4 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
                     Seamless ERP integration
                   </li>
                 </ul>
+                <Button asChild className="btn-outline w-full">
+                  <Link href="/products/crm">Learn More</Link>
+                </Button>
               </CardContent>
             </Card>
-            <Card className="card-hover border-2 hover:border-primary/20">
+            <Card className="corporate-card corporate-card-hover">
               <CardHeader>
-                <div className="mb-4">
+                <div className="mb-6">
                   <Image
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop&crop=center"
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&crop=center"
                     alt="ERP Product illustration"
-                    width={300}
-                    height={200}
-                    className="w-full h-32 object-cover corporate-shadow"
+                    width={400}
+                    height={250}
+                    className="w-full h-40 object-cover corporate-shadow"
                   />
                 </div>
-                <CardTitle className="flex items-center space-x-2 font-heading">
-                  <Settings className="h-5 w-5 text-primary" />
+                <CardTitle className="flex items-center space-x-3 font-heading text-xl mb-3">
+                  <Settings className="h-6 w-6 text-red-500" />
                   <span>ERP</span>
                 </CardTitle>
-                <CardDescription>Comprehensive ERP for SMBs and enterprises.</CardDescription>
+                <CardDescription className="text-base mb-4">Comprehensive ERP for SMBs and enterprises.</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <ul className="space-y-2 text-sm text-gray-600 mb-6">
                   <li className="flex items-start">
-                    <span className="text-primary mr-2 font-bold">•</span>
+                    <CheckCircle className="h-4 w-4 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
                     Finance, HRMS, Payroll, MM, PP, SD
                   </li>
                   <li className="flex items-start">
-                    <span className="text-primary mr-2 font-bold">•</span>
+                    <CheckCircle className="h-4 w-4 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
                     Cloud and on-premise deployment
                   </li>
                   <li className="flex items-start">
-                    <span className="text-primary mr-2 font-bold">•</span>
+                    <CheckCircle className="h-4 w-4 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
                     Fully customizable modules
                   </li>
                 </ul>
+                <Button asChild className="btn-outline w-full">
+                  <Link href="/products/erp">Learn More</Link>
+                </Button>
               </CardContent>
             </Card>
-            <Card className="card-hover border-2 hover:border-primary/20">
+            <Card className="corporate-card corporate-card-hover">
               <CardHeader>
-                <div className="mb-4">
+                <div className="mb-6">
                   <Image
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=200&fit=crop&crop=center"
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop&crop=center"
                     alt="HRMS Product illustration"
-                    width={300}
-                    height={200}
-                    className="w-full h-32 object-cover corporate-shadow"
+                    width={400}
+                    height={250}
+                    className="w-full h-40 object-cover corporate-shadow"
                   />
                 </div>
-                <CardTitle className="flex items-center space-x-2 font-heading">
-                  <Users className="h-5 w-5 text-primary" />
+                <CardTitle className="flex items-center space-x-3 font-heading text-xl mb-3">
+                  <Users className="h-6 w-6 text-red-500" />
                   <span>HRMS</span>
                 </CardTitle>
-                <CardDescription>Simplify HR operations with next-gen automation.</CardDescription>
+                <CardDescription className="text-base mb-4">Simplify HR operations with next-gen automation.</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <ul className="space-y-2 text-sm text-gray-600 mb-6">
                   <li className="flex items-start">
-                    <span className="text-primary mr-2 font-bold">•</span>
+                    <CheckCircle className="h-4 w-4 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
                     Payroll and compliance management
                   </li>
                   <li className="flex items-start">
-                    <span className="text-primary mr-2 font-bold">•</span>
+                    <CheckCircle className="h-4 w-4 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
                     Employee self-service portals
                   </li>
                   <li className="flex items-start">
-                    <span className="text-primary mr-2 font-bold">•</span>
+                    <CheckCircle className="h-4 w-4 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
                     Performance and workforce analytics
                   </li>
                 </ul>
+                <Button asChild className="btn-outline w-full">
+                  <Link href="/products/hrms">Learn More</Link>
+                </Button>
               </CardContent>
             </Card>
           </div>
@@ -430,148 +444,94 @@ export default function HomePage() {
       </section>
 
       {/* 6. Industries We Serve */}
-      <section className="section-padding bg-muted">
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance font-heading tracking-tight">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6 text-gray-900 text-balance">
               Industries We Serve
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-pretty">
               Delivering specialized solutions across diverse industries with deep domain expertise.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            <div className="text-center p-6 bg-background card-hover border-2 hover:border-primary/20">
-              <div className="mb-4">
-                <Image
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=60&h=60&fit=crop&crop=center"
-                  alt="Manufacturing industry"
-                  width={60}
-                  height={60}
-                  className="mx-auto corporate-shadow"
-                />
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <div className="text-center p-8 bg-white corporate-card corporate-card-hover">
+              <div className="mb-6">
+                <Factory className="h-12 w-12 text-red-500 mx-auto" />
               </div>
-              <h3 className="font-semibold font-heading">Manufacturing</h3>
+              <h3 className="font-heading font-semibold text-gray-900">Manufacturing</h3>
             </div>
-            <div className="text-center p-6 bg-background card-hover border-2 hover:border-primary/20">
-              <div className="mb-4">
-                <Image
-                  src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=60&h=60&fit=crop&crop=center"
-                  alt="BFSI industry"
-                  width={60}
-                  height={60}
-                  className="mx-auto corporate-shadow"
-                />
+            <div className="text-center p-8 bg-white corporate-card corporate-card-hover">
+              <div className="mb-6">
+                <Banknote className="h-12 w-12 text-red-500 mx-auto" />
               </div>
-              <h3 className="font-semibold font-heading">BFSI</h3>
+              <h3 className="font-heading font-semibold text-gray-900">BFSI</h3>
             </div>
-            <div className="text-center p-6 bg-background card-hover border-2 hover:border-primary/20">
-              <div className="mb-4">
-                <Image
-                  src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=60&h=60&fit=crop&crop=center"
-                  alt="Pharmaceutical industry"
-                  width={60}
-                  height={60}
-                  className="mx-auto corporate-shadow"
-                />
+            <div className="text-center p-8 bg-white corporate-card corporate-card-hover">
+              <div className="mb-6">
+                <Heart className="h-12 w-12 text-red-500 mx-auto" />
               </div>
-              <h3 className="font-semibold font-heading">Pharma</h3>
+              <h3 className="font-heading font-semibold text-gray-900">Pharma</h3>
             </div>
-            <div className="text-center p-6 bg-background card-hover border-2 hover:border-primary/20">
-              <div className="mb-4">
-                <Image
-                  src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=60&h=60&fit=crop&crop=center"
-                  alt="Retail industry"
-                  width={60}
-                  height={60}
-                  className="mx-auto corporate-shadow"
-                />
+            <div className="text-center p-8 bg-white corporate-card corporate-card-hover">
+              <div className="mb-6">
+                <ShoppingCart className="h-12 w-12 text-red-500 mx-auto" />
               </div>
-              <h3 className="font-semibold font-heading">Retail</h3>
+              <h3 className="font-heading font-semibold text-gray-900">Retail</h3>
             </div>
-            <div className="text-center p-6 bg-background card-hover border-2 hover:border-primary/20">
-              <div className="mb-4">
-                <Image
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=60&h=60&fit=crop&crop=center"
-                  alt="Public sector"
-                  width={60}
-                  height={60}
-                  className="mx-auto corporate-shadow"
-                />
+            <div className="text-center p-8 bg-white corporate-card corporate-card-hover">
+              <div className="mb-6">
+                <Building2 className="h-12 w-12 text-red-500 mx-auto" />
               </div>
-              <h3 className="font-semibold font-heading">Public Sector</h3>
+              <h3 className="font-heading font-semibold text-gray-900">Public Sector</h3>
             </div>
           </div>
         </div>
       </section>
 
       {/* 7. Why Choose Infocure */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance font-heading">Why Choose Infocure</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6 text-gray-900">Why Choose Infocure</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-pretty">
               The values and capabilities that set us apart as your trusted technology partner.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center p-6">
-              <div className="mb-4">
-                <Image
-                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=80&h=80&fit=crop&crop=center"
-                  alt="Trust illustration"
-                  width={80}
-                  height={80}
-                  className="mx-auto corporate-shadow"
-                />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center p-8">
+              <div className="mb-6">
+                <Award className="h-16 w-16 text-red-500 mx-auto" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 font-heading">Trust</h3>
-              <p className="text-muted-foreground text-sm">
+              <h3 className="text-xl font-heading font-semibold mb-4 text-gray-900">Trust</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
                 Built on integrity and transparency, delivering on our commitments with unwavering reliability.
               </p>
             </div>
-            <div className="text-center p-6">
-              <div className="mb-4">
-                <Image
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=center"
-                  alt="Expertise illustration"
-                  width={80}
-                  height={80}
-                  className="mx-auto corporate-shadow"
-                />
+            <div className="text-center p-8">
+              <div className="mb-6">
+                <Target className="h-16 w-16 text-red-500 mx-auto" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 font-heading">Expertise</h3>
-              <p className="text-muted-foreground text-sm">
+              <h3 className="text-xl font-heading font-semibold mb-4 text-gray-900">Expertise</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
                 Deep technical knowledge and industry experience across enterprise technologies and business domains.
               </p>
             </div>
-            <div className="text-center p-6">
-              <div className="mb-4">
-                <Image
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=80&h=80&fit=crop&crop=center"
-                  alt="Innovation illustration"
-                  width={80}
-                  height={80}
-                  className="mx-auto corporate-shadow"
-                />
+            <div className="text-center p-8">
+              <div className="mb-6">
+                <Zap className="h-16 w-16 text-red-500 mx-auto" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 font-heading">Innovation</h3>
-              <p className="text-muted-foreground text-sm">
+              <h3 className="text-xl font-heading font-semibold mb-4 text-gray-900">Innovation</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
                 Embracing cutting-edge technologies and methodologies to drive continuous improvement and growth.
               </p>
             </div>
-            <div className="text-center p-6">
-              <div className="mb-4">
-                <Image
-                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=80&h=80&fit=crop&crop=center"
-                  alt="Global delivery illustration"
-                  width={80}
-                  height={80}
-                  className="mx-auto corporate-shadow"
-                />
+            <div className="text-center p-8">
+              <div className="mb-6">
+                <Globe className="h-16 w-16 text-red-500 mx-auto" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 font-heading">Global Delivery</h3>
-              <p className="text-muted-foreground text-sm">
+              <h3 className="text-xl font-heading font-semibold mb-4 text-gray-900">Global Delivery</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
                 Worldwide presence with local expertise, ensuring seamless service delivery across time zones.
               </p>
             </div>
@@ -580,84 +540,84 @@ export default function HomePage() {
       </section>
 
       {/* 8. Our Approach */}
-      <section className="section-padding bg-muted">
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance font-heading">Our Approach</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6 text-gray-900">Our Approach</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-pretty">
               A proven methodology that ensures successful project delivery and long-term value creation.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="mb-4">
+              <div className="mb-6">
                 <Image
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=center"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=center"
                   alt="Consult process illustration"
-                  width={80}
-                  height={80}
+                  width={120}
+                  height={120}
                   className="mx-auto corporate-shadow"
                 />
               </div>
-              <div className="w-12 h-12 bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 text-xl font-bold font-heading transition-all duration-300 hover:scale-110">
+              <div className="w-16 h-16 bg-red-500 text-white flex items-center justify-center mx-auto mb-6 text-2xl font-heading font-bold transition-all duration-300 hover:scale-110">
                 1
               </div>
-              <h3 className="text-xl font-semibold mb-2 font-heading">Consult</h3>
-              <p className="text-muted-foreground text-sm">
+              <h3 className="text-xl font-heading font-semibold mb-4 text-gray-900">Consult</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
                 Understand your business needs, assess current state, and define transformation roadmap.
               </p>
             </div>
             <div className="text-center">
-              <div className="mb-4">
+              <div className="mb-6">
                 <Image
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=80&h=80&fit=crop&crop=center"
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=120&h=120&fit=crop&crop=center"
                   alt="Implement process illustration"
-                  width={80}
-                  height={80}
+                  width={120}
+                  height={120}
                   className="mx-auto corporate-shadow"
                 />
               </div>
-              <div className="w-12 h-12 bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 text-xl font-bold font-heading transition-all duration-300 hover:scale-110">
+              <div className="w-16 h-16 bg-red-500 text-white flex items-center justify-center mx-auto mb-6 text-2xl font-heading font-bold transition-all duration-300 hover:scale-110">
                 2
               </div>
-              <h3 className="text-xl font-semibold mb-2 font-heading">Implement</h3>
-              <p className="text-muted-foreground text-sm">
+              <h3 className="text-xl font-heading font-semibold mb-4 text-gray-900">Implement</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
                 Deploy solutions with precision, following best practices and minimizing business disruption.
               </p>
             </div>
             <div className="text-center">
-              <div className="mb-4">
+              <div className="mb-6">
                 <Image
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=80&h=80&fit=crop&crop=center"
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=120&h=120&fit=crop&crop=center"
                   alt="Support process illustration"
-                  width={80}
-                  height={80}
+                  width={120}
+                  height={120}
                   className="mx-auto corporate-shadow"
                 />
               </div>
-              <div className="w-12 h-12 bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 text-xl font-bold font-heading transition-all duration-300 hover:scale-110">
+              <div className="w-16 h-16 bg-red-500 text-white flex items-center justify-center mx-auto mb-6 text-2xl font-heading font-bold transition-all duration-300 hover:scale-110">
                 3
               </div>
-              <h3 className="text-xl font-semibold mb-2 font-heading">Support</h3>
-              <p className="text-muted-foreground text-sm">
+              <h3 className="text-xl font-heading font-semibold mb-4 text-gray-900">Support</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
                 Provide ongoing maintenance, optimization, and user support for sustained performance.
               </p>
             </div>
             <div className="text-center">
-              <div className="mb-4">
+              <div className="mb-6">
                 <Image
-                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=80&h=80&fit=crop&crop=center"
+                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=120&h=120&fit=crop&crop=center"
                   alt="Scale process illustration"
-                  width={80}
-                  height={80}
+                  width={120}
+                  height={120}
                   className="mx-auto corporate-shadow"
                 />
               </div>
-              <div className="w-12 h-12 bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 text-xl font-bold font-heading transition-all duration-300 hover:scale-110">
+              <div className="w-16 h-16 bg-red-500 text-white flex items-center justify-center mx-auto mb-6 text-2xl font-heading font-bold transition-all duration-300 hover:scale-110">
                 4
               </div>
-              <h3 className="text-xl font-semibold mb-2 font-heading">Scale</h3>
-              <p className="text-muted-foreground text-sm">
+              <h3 className="text-xl font-heading font-semibold mb-4 text-gray-900">Scale</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
                 Expand capabilities and adapt solutions as your business grows and evolves.
               </p>
             </div>
@@ -666,108 +626,177 @@ export default function HomePage() {
       </section>
 
       {/* 9. Global Presence */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance font-heading tracking-tight">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6 text-gray-900 text-balance">
               Global Presence
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-pretty">
               Serving clients worldwide with local expertise and global delivery capabilities.
             </p>
           </div>
-          <div className="mb-8">
+          <div className="mb-12">
             <Image
-              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=300&fit=crop&crop=center"
+              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1000&h=400&fit=crop&crop=center"
               alt="Global presence world map"
-              width={800}
-              height={300}
+              width={1000}
+              height={400}
               className="w-full h-auto object-cover mx-auto corporate-shadow-lg"
             />
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 text-center">
             {["Mumbai", "Bangalore", "Delhi NCR", "Kolkata", "Dubai", "Singapore", "Germany", "UK"].map((location) => (
-              <div key={location} className="p-4 bg-muted card-hover border-2 hover:border-primary/20">
-                <Globe className="h-8 w-8 text-primary mx-auto mb-2" />
-                <div className="text-sm font-medium font-heading">{location}</div>
+              <div key={location} className="p-6 bg-gray-50 corporate-card corporate-card-hover">
+                <Globe className="h-10 w-10 text-red-500 mx-auto mb-3" />
+                <div className="text-sm font-heading font-medium text-gray-900">{location}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 10. Compliance & Security */}
-      <section className="section-padding bg-muted">
+      {/* 10. Statistics & Metrics */}
+      <section className="section-padding bg-gray-900 text-white">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance font-heading tracking-tight">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6 text-white">
+              Proven Track Record
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto text-pretty">
+              Numbers that demonstrate our commitment to excellence and client success.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-heading font-bold text-red-400 mb-3">10+</div>
+              <div className="text-lg font-heading font-semibold mb-2">Years of Excellence</div>
+              <div className="text-sm text-gray-400">Delivering mission-critical solutions since 2014</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-heading font-bold text-red-400 mb-3">1000+</div>
+              <div className="text-lg font-heading font-semibold mb-2">Projects Delivered</div>
+              <div className="text-sm text-gray-400">Across multiple industries and geographies</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-heading font-bold text-red-400 mb-3">21+</div>
+              <div className="text-lg font-heading font-semibold mb-2">Industry Sectors</div>
+              <div className="text-sm text-gray-400">Deep domain expertise across verticals</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-heading font-bold text-red-400 mb-3">8</div>
+              <div className="text-lg font-heading font-semibold mb-2">Global Offices</div>
+              <div className="text-sm text-gray-400">Serving clients worldwide with local expertise</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 11. Compliance & Security */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-8 text-gray-900 text-balance">
               Compliance & Security
             </h2>
-            <div className="mb-8">
+            <div className="mb-12">
               <Image
-                src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=200&fit=crop&crop=center"
+                src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=300&fit=crop&crop=center"
                 alt="Compliance and security illustration"
-                width={600}
-                height={200}
+                width={800}
+                height={300}
                 className="w-full h-auto object-cover mx-auto corporate-shadow-lg"
               />
             </div>
-            <p className="text-lg text-muted-foreground mb-8 text-pretty leading-relaxed">
+            <p className="text-lg text-gray-600 mb-12 text-pretty leading-relaxed max-w-4xl mx-auto">
               We prioritize risk management and compliance across all our solutions. Our comprehensive approach includes
               24/7 threat monitoring, robust security frameworks, and adherence to global compliance standards. With
               proactive risk assessment and continuous security monitoring, we ensure your business operations remain
               secure, compliant, and resilient against evolving threats.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
-                <Shield className="h-12 w-12 text-primary mx-auto mb-3 transition-all duration-300 hover:scale-110" />
-                <h3 className="font-semibold mb-2 font-heading">24/7 Monitoring</h3>
-                <p className="text-sm text-muted-foreground">Continuous threat detection and response</p>
+                <Shield className="h-16 w-16 text-red-500 mx-auto mb-4 transition-all duration-300 hover:scale-110" />
+                <h3 className="font-heading font-semibold mb-3 text-gray-900">24/7 Monitoring</h3>
+                <p className="text-sm text-gray-600">Continuous threat detection and response</p>
               </div>
               <div className="text-center">
-                <CheckCircle className="h-12 w-12 text-primary mx-auto mb-3 transition-all duration-300 hover:scale-110" />
-                <h3 className="font-semibold mb-2 font-heading">Global Compliance</h3>
-                <p className="text-sm text-muted-foreground">Adherence to international standards</p>
+                <CheckCircle className="h-16 w-16 text-red-500 mx-auto mb-4 transition-all duration-300 hover:scale-110" />
+                <h3 className="font-heading font-semibold mb-3 text-gray-900">Global Compliance</h3>
+                <p className="text-sm text-gray-600">Adherence to international standards</p>
               </div>
               <div className="text-center">
-                <Settings className="h-12 w-12 text-primary mx-auto mb-3 transition-all duration-300 hover:scale-110" />
-                <h3 className="font-semibold mb-2 font-heading">Risk Management</h3>
-                <p className="text-sm text-muted-foreground">Proactive assessment and mitigation</p>
+                <Settings className="h-16 w-16 text-red-500 mx-auto mb-4 transition-all duration-300 hover:scale-110" />
+                <h3 className="font-heading font-semibold mb-3 text-gray-900">Risk Management</h3>
+                <p className="text-sm text-gray-600">Proactive assessment and mitigation</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 11. Final CTA Banner */}
-      <section className="relative section-padding bg-primary text-primary-foreground overflow-hidden">
+      {/* 12. Newsletter Subscription Banner */}
+      <section className="relative section-padding bg-gray-50 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=400&fit=crop&crop=center"
+            src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1400&h=600&fit=crop&crop=center"
+            alt="Newsletter background"
+            width={1400}
+            height={600}
+            className="w-full h-full object-cover opacity-10"
+          />
+        </div>
+        <div className="relative container-custom">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6 text-gray-900">
+              Stay Ahead with Industry Insights
+            </h2>
+            <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto text-pretty">
+              Get the latest trends, best practices, and expert insights delivered to your inbox. Join thousands of IT leaders who trust our expertise.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-6 py-3 border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+              />
+              <Button className="btn-primary whitespace-nowrap">
+                Subscribe
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 13. Final CTA Banner */}
+      <section className="relative section-padding bg-gray-900 text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1400&h=600&fit=crop&crop=center"
             alt="CTA background"
-            width={1200}
-            height={400}
+            width={1400}
+            height={600}
             className="w-full h-full object-cover opacity-20"
           />
         </div>
         <div className="relative container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance font-heading">
+          <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6 text-white text-balance">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto text-pretty opacity-90">
+          <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto text-pretty">
             Partner with Infocure Technologies to accelerate your digital transformation journey and unlock new
             possibilities for growth.
           </p>
-          <Button
-            size="lg"
-            variant="secondary"
-            asChild
-            className="btn-hover px-8 py-3"
-          >
-            <Link href="/contact">
-              Schedule a Consultation <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild className="bg-red-500 hover:bg-red-600 text-white font-medium px-10 py-4 text-lg">
+              <Link href="/contact">
+                Schedule a Consultation <ArrowRight className="ml-3 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild className="btn-secondary">
+              <Link href="/about">Learn More About Us</Link>
+            </Button>
+          </div>
         </div>
       </section>
 
